@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>CAS客户端</title>
+</head>
+
+<body>
+    <div>
+        <p>欢迎登录CAS客户端,您的账号为
+            <h3 th:text="${username}"></h3>
+        </p>
+    </div>
+    <div>
+        <p>所有属性如下：</p>
+        <ul>
+            <li th:each="entry : ${attributes}">
+                <span th:text="${entry.key}"></span> :
+                <span th:text="${entry.value}"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
